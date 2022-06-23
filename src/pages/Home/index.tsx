@@ -1,10 +1,14 @@
 import React from "react"
 import { ReactDOM } from "react"
 
-import styles from "style.scss";
+import styles from "style.module.scss";
+import { Header } from "../../components/Header";
 
 export function Home() {
   return (
-    <h1>Hello</h1>
+    <>
+      <Header/>
+      <h1>Hello</h1>
+    </>
   )
 }
