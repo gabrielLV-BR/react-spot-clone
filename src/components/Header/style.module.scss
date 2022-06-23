@@ -1,0 +1,33 @@
+.header {
+  width: 100vw;
+  height: 10vh;
+
+  background-color: #212121;
+
+  padding: 0.3rem 0.8rem;
+
+  &, .right ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .right ul {
+    list-style: none;
+    justify-content: flex-start;
+
+    gap: 1.25rem;
+
+    font-size: 1.25rem;
+  }
+
+  .right ul a {
+    color: white;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
+}
