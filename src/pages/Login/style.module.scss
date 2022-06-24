@@ -1,0 +1,77 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #404040;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main .row, .main .row div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.main form {
+  width: fit-content;
+  height: fit-content;
+  align-items: flex-start;
+
+  padding: 5rem 3rem;
+  font-size: 2rem;
+
+  & > label {
+    font-size: 1rem;
+    margin: 1.75rem 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  input {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    padding: 0.5rem;
+
+
+    width: 100%;
+  }
+
+  a {
+    color: var(--primary-color);
+    font-size: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+  }
+
+  input[type=checkbox] {
+    margin-right: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .row {
+    width: 100%;
+    padding: 0 1rem;
+
+    font-size: 1.5rem;
+
+    align-items: center;
+    justify-content: space-between;
+
+    label {
+      font-size: 1rem;
+    }
+  }
+
+  border-radius: 1.5rem;
+
+  background-color: #212121;
+}
