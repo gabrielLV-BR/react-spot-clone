@@ -16,7 +16,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #414141;
+    background-color: #212121;
   }
 
   * {
@@ -36,6 +36,8 @@
     text-overflow: ellipsis;
     margin-left: 0.3rem;
     font-size: 1em;
+
+    color: var(--font-color);
   }
 
   .dropdown {

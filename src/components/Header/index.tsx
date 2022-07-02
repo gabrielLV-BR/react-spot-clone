@@ -16,8 +16,10 @@ export function Header() {
         <li><Link to="/home">Premium</Link></li>
         <li><Link to="/home">Suporte</Link></li>
         <li><Link to="/home">Baixar</Link></li>
-        <li><Profile/></li>
+        <li className={styles.profile}><Profile/></li>
+        <li className={styles.logo}><Logo/></li>
       </ul>
     </span>
+    <button className={styles.toggleMenu}>Menu</button>
   </header>
 }
