@@ -1,6 +1,6 @@
 .footer {
   width: 100vw;
-  height: 50vh;
+  height: fit-content;
 
   display: flex;
   align-items: center;
@@ -40,10 +40,9 @@
   flex-direction: row;
   align-items: flex-start;
 
-  margin-top: 5%;
+  margin-top: 5rem;
   gap: 3rem;
 
-  height: 90%;
   flex: 1;
 
   h2 {
@@ -65,13 +64,12 @@
     justify-content: space-between;
   }
 
-  width: 50%;
+  height: 2rem;
 
   align-items: center;
   flex-direction: row;
 
-  margin-bottom: 5%;
-
+  margin-bottom: 5rem;
   font-size: 0.8rem;
 
   .left {
@@ -86,3 +84,23 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .links {
+    align-self: flex-start;
+    margin-left: 2rem;
+    height: fit-content;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .footer {
+    flex-direction: row;
+  }
+  .etc {
+    width: 50%;
+  }
+  .etc, .etc .left, .etc .right{
+    flex-direction: column;
+  }
+}
