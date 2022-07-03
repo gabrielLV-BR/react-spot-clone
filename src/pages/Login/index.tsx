@@ -1,16 +1,15 @@
-import React, { useState } from "react"
-import { ReactDOM } from "react"
+import { useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../components/Button";
 import { Footer } from "../../components/Footer";
-import { Header } from "../../components/Header";
+import { Logo } from "../../components/Logo";
 
 import styles from "./style.module.scss";
 
 export function Login() {
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
 
   const navigate = useNavigate()
 
@@ -20,14 +19,14 @@ export function Login() {
 
   return (
     <main className={styles.main}>
-      <Header/>
-
+      <header>
+        <Logo className={styles.logo} />
+      </header>
       <form action="POST" onSubmit={handleSubmit}>
         <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" value={email} onChange={e => setEmail(e.target.value)}/>
+        <input ref={emailRef} type="email" name="email" id="email" defaultValue="E-mail"/>
         <label htmlFor="senha">Senha</label>
-        <input type="password" name="password" id="password" value={password} 
-          onChange={e => setPassword(e.target.value)}/>
+        <input ref={passwordRef} type="password" name="password" id="password" defaultValue="Senha" />
 
         <Link to="/home">Esqueceu sua senha?</Link>
         <span className={styles.row}>
